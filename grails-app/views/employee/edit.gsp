@@ -64,9 +64,15 @@
             <div class="row">
                 <div class="form-group col-12">
                     <label>Department</label>
-                    <g:select class="form-control" name="department" from="${Department?.list()}" optionKey="id" optionValue="title" required="" value="${employee?.department?.id}"
-                    disabled="${sec.ifNotGranted(roles:'ROLE_EDIT')?true:false}"
-                    />
+                    <sec:ifAnyGranted roles="ROLE_EDIT">
+                        <g:select class="form-control" name="department" from="${Department?.list()}" optionKey="id" optionValue="title" required="" value="${employee?.department?.id}"
+                        />
+                    </sec:ifAnyGranted>
+                    <sec:ifAnyGranted roles="ROLE_READ">
+                        <g:select class="form-control" name="department" from="${Department?.list()}" optionKey="id" optionValue="title" required="" value="${employee?.department?.id}"
+                        disabled="true"
+                        />
+                    </sec:ifAnyGranted>
                 </div>
             </div>
             <sec:ifAnyGranted roles="ROLE_EDIT">
