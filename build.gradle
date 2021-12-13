@@ -76,7 +76,7 @@ dependencies {
     implementation "org.grails.plugins:spring-security-core:4.0.3"
 }
 
-task stage(dependsOn: ['bootJar'])
+task stage(dependsOn: ['bootRun'])
 
 tasks.stage.doLast() {
     delete fileTree(dir: "build/distributions")

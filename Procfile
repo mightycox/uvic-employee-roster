@@ -1,1 +1,1 @@
-web: java -Dgrails.env=$ENV -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
+web: java -Dgrails.env=production -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
