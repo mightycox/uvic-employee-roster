@@ -14,7 +14,7 @@
         <span class="col-sm-6 pb-4">Department</span>
         <sec:ifAnyGranted roles="ROLE_EDIT">
             <span class="col-sm-6 text-sm-right pb-4">
-                <form action="/department/delete" method="post" onsubmit="return confirm('Are you sure?');">
+                <form action="/department/delete/${department?.id}" method="post" onsubmit="return confirm('Are you sure?');">
                     <input type="hidden" name="id" value="${department?.id}"/>
                     <button class="btn btn-danger btn-outline-danger d-block d-sm-inline-block">Delete Department</button>
                 </form>
