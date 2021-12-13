@@ -30,4 +30,9 @@
 /web-app/plugins
 
 # "temporary" build files
-/target
+/build
+
+.idea
+
+.gradle
+/gradle
