@@ -1,0 +1,5 @@
+uvic.employee.roster.$DepartmentServiceImplementation
+uvic.employee.roster.$EmployeeServiceImplementation
+uvic.employee.roster.$SecurityRoleServiceImplementation
+uvic.employee.roster.$UserSecurityRoleServiceImplementation
+uvic.employee.roster.$UserServiceImplementation
